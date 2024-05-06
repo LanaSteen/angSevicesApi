@@ -1,0 +1,29 @@
+
+<h1>All Products</h1>
+<section>
+    <div class="card" style="width: 18rem;" 
+    routerLink="/about"
+    [queryParams]="{
+        id: product.id,
+    }"
+    *ngFor="let product of productList let i = index" >
+        <div class="overLay">
+            <img [src]="product.image" class="card-img-top" alt="...">
+         </div>
+        <div class="card-body">
+            <div [ngClass]="index==i? classShow : 'textOver'" 
+            (click)="show(i)"
+            style="cursor: pointer;">
+               <h5 class="card-title">{{product.title}}</h5>
+         
+            </div>
+            <p (click)="show(i)"
+            style="cursor: pointer;">...</p>
+            <p class="card-text">{{product.category}}</p>
+
+          <span class="card-text">rate: {{product.rating.rate}}</span>
+          <span class="card-text">count: {{product.rating.count}}</span> <br>
+          <a href="#" class="btn btn-primary">{{product.price}}</a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,22 @@
+
+<h1> Product</h1>
+<section>
+    <div class="card" style="width: 18rem;" 
+    >
+        <div class="overLay">
+            <img [src]="newProduct.image" class="card-img-top" alt="...">
+         </div>
+        <div class="card-body">
+        
+            <div>
+               <h5 class="card-title">{{newProduct.title}}</h5>
+         
+            </div>
+            <p class="card-text">{{newProduct.category}}</p>
+
+          <span class="card-text">{{newProduct.rating.rate}}</span>
+          <span class="card-text"> {{newProduct.rating.count}}</span> <br>
+          <a href="#" class="btn btn-primary">{{newProduct.price}}</a>
+        </div>
+    </div>
+</section>
