@@ -8,6 +8,8 @@ import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GalleryComponent } from './gallery/gallery.component';
 import { NavComponent } from './nav/nav.component';
+import { ChildComponent } from './child/child.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { NavComponent } from './nav/nav.component';
     HomeComponent,
     AboutComponent,
     GalleryComponent,
-    NavComponent
+    NavComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
